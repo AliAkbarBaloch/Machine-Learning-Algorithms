@@ -1,0 +1,122 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlab"
+version = "0.10.0"
+description = "From-scratch NumPy implementations of classical machine-learning algorithms (regression, clustering, naive Bayes, trees and forests, SVMs, MLP, CNN) and evaluation metrics."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ali Akbar", email = "akbar01@ads.uni-passau.de" }]
+keywords = [
+    "machine-learning",
+    "linear-regression",
+    "logistic-regression",
+    "stochastic-gradient-descent",
+    "k-means",
+    "clustering",
+    "naive-bayes",
+    "gaussian-naive-bayes",
+    "multinomial-naive-bayes",
+    "text-classification",
+    "decision-tree",
+    "random-forest",
+    "ensemble",
+    "information-gain",
+    "support-vector-machine",
+    "svm",
+    "svc",
+    "svr",
+    "kernel-methods",
+    "sequential-minimal-optimization",
+    "neural-network",
+    "multi-layer-perceptron",
+    "mlp",
+    "backpropagation",
+    "adam",
+    "convolutional-neural-network",
+    "cnn",
+    "max-pooling",
+    "image-classification",
+    "evaluation-metrics",
+    "confusion-matrix",
+    "roc-auc",
+    "silhouette-score",
+    "adjusted-rand-index",
+    "from-scratch",
+    "education",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+# The algorithms in `mlab/` import nothing but NumPy.
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+# Example scripts, tests and dataset generators: CSV loading, the scikit-learn
+# reference models used for comparison, and plotting. Install with: pip install -e ".[examples]"
+examples = [
+    "pandas>=2.0",
+    "scikit-learn>=1.3",
+    "matplotlib>=3.7",
+    "seaborn>=0.13",
+]
+# Jupyter + the UCI dataset loader used by final-assignment/SetD.ipynb.
+# Install with: pip install -e ".[examples,notebook]"
+notebook = [
+    "jupyter>=1.0",
+    "ipykernel>=6.25",
+    "ucimlrepo>=0.0.7",
+]
+# Tests, linter and type-checker. Install with: pip install -e ".[examples,dev]"
+dev = [
+    "pytest>=8.0",
+    "pylint>=3.0",
+    "mypy>=1.8",
+]
+
+[project.urls]
+Repository = "https://github.com/AliAkbarBaloch/Machine-Learning-Algorithms"
+
+# Tell setuptools to ship only the `mlab` package (not the assignment notebooks
+# or local artefacts that sit at the repository root).
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mlab*"]
+exclude = ["datasets*", "tests*", "examples*", ".venv*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.pylint.basic]
+# Standard scientific ML short names: X (feature matrix), C (regularisation),
+# y (target), b (bias), K (kernel matrix).
+good-names = ["X", "C", "y", "b", "K", "i", "j", "n", "lr", "b1", "b2"]
+
+[tool.pylint.design]
+# SVM and sklearn-compatible classes legitimately require more attributes and
+# arguments than pylint's conservative defaults.
+max-attributes = 20
+max-args = 10
+max-positional-arguments = 10
+max-locals = 30
+max-statements = 60
+
+[tool.pylint.format]
+# _svc.py (full SMO implementation) carries extensive line-by-line teaching
+# comments on top of its already-dense algorithm code, pushing it past
+# pylint's default 1000-line module cap without adding any real complexity.
+max-module-lines = 1300

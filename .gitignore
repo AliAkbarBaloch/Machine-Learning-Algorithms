@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+
+# Tool caches
+.mypy_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# MNIST digit CSVs (~125 MB) — download instructions in datasets/README.md
+datasets/train.csv
+datasets/test.csv
+
+# Instructor notebooks and guides, kept locally and not published
+/0[1-9][-_]*/
