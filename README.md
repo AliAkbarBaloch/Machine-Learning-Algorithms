@@ -13,6 +13,18 @@ The repository started as weekly assignments in the Machine Learning Lab at the 
 - Performance engineering: profiling-driven vectorisation of tree split search, im2col-style convolution via `sliding_window_view`, and a scatter-add (col2im) convolution backward pass.
 - Engineering hygiene: type hints (mypy-clean), NumPy-style docstrings, pylint 9.7/10, a pytest suite and a reproducible benchmark script.
 
+## Architecture
+
+![mlab library architecture](docs/architecture.svg)
+
+Each model family is a self-contained subpackage behind the scikit-learn estimator interface, built on NumPy alone. scikit-learn sits outside the library and is used only to verify it.
+
+### CNNClassifier
+
+![CNNClassifier network architecture](docs/cnn-architecture.svg)
+
+The convolutional network is the most involved model: every layer's forward and backward pass is hand-written, with convolution as a single matrix multiply and no autograd.
+
 ## Algorithms Implemented
 
 All models are implemented from scratch. scikit-learn appears only in `examples/` and `tests/`, as the reference being compared against (plus `CountVectorizer` to turn text into counts).

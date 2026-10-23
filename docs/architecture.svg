@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1240" font-family="Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1400" height="1240" fill="#ffffff"/>
+<defs>
+  <marker id="arrowPurple" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker>
+  <marker id="arrowBlue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d4ed8"/></marker>
+  <marker id="arrowGreen" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#15803d"/></marker>
+  <marker id="arrowRed" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b91c1c"/></marker>
+  <marker id="arrowOrange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c2410c"/></marker>
+</defs>
+<text x="700.0" y="40" font-size="22" font-weight="700" fill="#0f172a" text-anchor="middle">mlab — Library Architecture</text>
+<text x="700.0" y="63" font-size="12" font-weight="400" fill="#64748b" text-anchor="middle">15 classical models and 21 metrics written from scratch on NumPy, each checked against scikit-learn</text>
+<rect x="400" y="88" width="600" height="84" rx="14" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="700.0" y="114" font-size="14" font-weight="700" fill="#0f172a" text-anchor="middle">Your code</text>
+<text x="700.0" y="133" font-size="10.5" font-weight="400" fill="#475569" text-anchor="middle" font-style="italic">the scikit-learn estimator interface, implemented by every model</text>
+<text x="700.0" y="158" font-size="10.5" font-weight="400" fill="#334155" text-anchor="middle">fit(X, y)  ·  predict(X)  ·  predict_proba(X)  ·  score(X, y)  ·  learned state in coef_, layers_, …</text>
+<line x1="700" y1="172" x2="700" y2="214" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="60" y="214" width="1280" height="590" rx="16" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
+<text x="84" y="244" font-size="17" font-weight="700" fill="#1e3a8a" text-anchor="start">mlab  —  one subpackage per model family</text>
+<text x="84" y="264" font-size="11" font-weight="400" fill="#1e40af" text-anchor="start" font-style="italic">independent estimators, no shared base class  ·  shared code lives with its family  ·  type-hinted, NumPy-style docstrings</text>
+<rect x="84" y="286" width="296" height="168" rx="14" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+<text x="100" y="312" font-size="14.5" font-weight="700" fill="#312e81" text-anchor="start">regression</text>
+<text x="100" y="331" font-size="10.5" font-weight="400" fill="#3730a3" text-anchor="start" font-style="italic">_linear.py  ·  _logistic.py</text>
+<text x="100" y="356" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• LinearRegressor: normal equation</text>
+<text x="100" y="373" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• SGDRegression: mini-batch SGD</text>
+<text x="100" y="390" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• LogisticRegression, SGDClassifier</text>
+<text x="100" y="407" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• clipped sigmoid, L2, class weights</text>
+<rect x="400" y="286" width="296" height="168" rx="14" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+<text x="416" y="312" font-size="14.5" font-weight="700" fill="#312e81" text-anchor="start">clustering</text>
+<text x="416" y="331" font-size="10.5" font-weight="400" fill="#3730a3" text-anchor="start" font-style="italic">_kmeans.py</text>
+<text x="416" y="356" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• KMeans: Lloyd's algorithm</text>
+<text x="416" y="373" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• KMeansPlusPlus: weighted seeding</text>
+<text x="416" y="390" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• broadcast distances</text>
+<text x="416" y="407" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• empty-cluster recovery</text>
+<rect x="716" y="286" width="296" height="168" rx="14" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+<text x="732" y="312" font-size="14.5" font-weight="700" fill="#312e81" text-anchor="start">naive_bayes</text>
+<text x="732" y="331" font-size="10.5" font-weight="400" fill="#3730a3" text-anchor="start" font-style="italic">_naive_bayes.py</text>
+<text x="732" y="356" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• GaussianNB: log-space likelihoods</text>
+<text x="732" y="373" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• MultinomialNB: Laplace smoothing</text>
+<text x="732" y="390" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• prediction as one matrix multiply</text>
+<text x="732" y="407" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• dense or sparse counts</text>
+<rect x="1032" y="286" width="296" height="168" rx="14" fill="#f0fdf4" stroke="#15803d" stroke-width="2"/>
+<text x="1048" y="312" font-size="14.5" font-weight="700" fill="#14532d" text-anchor="start">metrics</text>
+<text x="1048" y="331" font-size="10.5" font-weight="400" fill="#166534" text-anchor="start" font-style="italic">evaluation, separate from models</text>
+<text x="1048" y="356" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• classification: accuracy … ROC-AUC</text>
+<text x="1048" y="373" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• regression: MSE, R², …, Spearman</text>
+<text x="1048" y="390" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• clustering: silhouette, ARI, DB</text>
+<text x="1048" y="407" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• share _shared.py helpers</text>
+<rect x="84" y="476" width="296" height="168" rx="14" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+<text x="100" y="502" font-size="14.5" font-weight="700" fill="#312e81" text-anchor="start">trees</text>
+<text x="100" y="521" font-size="10.5" font-weight="400" fill="#3730a3" text-anchor="start" font-style="italic">_decision_tree.py  ·  _tree_utils.py</text>
+<text x="100" y="546" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• DecisionTreeClassifier (CART)</text>
+<text x="100" y="563" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• entropy / Gini impurity</text>
+<text x="100" y="580" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• presorted, vectorised split search</text>
+<text x="100" y="597" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• feature importances</text>
+<rect x="400" y="476" width="296" height="168" rx="14" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+<text x="416" y="502" font-size="14.5" font-weight="700" fill="#312e81" text-anchor="start">ensemble</text>
+<text x="416" y="521" font-size="10.5" font-weight="400" fill="#3730a3" text-anchor="start" font-style="italic">_random_forest.py</text>
+<text x="416" y="546" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• RandomForestClassifier</text>
+<text x="416" y="563" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• bagging + random feature subsets</text>
+<text x="416" y="580" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• majority vote</text>
+<text x="416" y="597" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• out-of-bag score via np.add.at</text>
+<rect x="716" y="476" width="296" height="168" rx="14" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+<text x="732" y="502" font-size="14.5" font-weight="700" fill="#312e81" text-anchor="start">svm</text>
+<text x="732" y="521" font-size="10.5" font-weight="400" fill="#3730a3" text-anchor="start" font-style="italic">_svm.py · _svc.py · _svr.py · _svm_utils.py</text>
+<text x="732" y="546" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• SVM: primal hinge-loss sub-gradient</text>
+<text x="732" y="563" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• SVC: dual SMO, one-vs-one</text>
+<text x="732" y="580" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• SVR: kernel ridge (closed form)</text>
+<text x="732" y="597" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• shared linear / RBF / poly kernels</text>
+<rect x="1032" y="476" width="296" height="168" rx="14" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="1048" y="502" font-size="14.5" font-weight="700" fill="#4c1d95" text-anchor="start">neural_networks</text>
+<text x="1048" y="521" font-size="10.5" font-weight="400" fill="#5b21b6" text-anchor="start" font-style="italic">_mlp.py  ·  _cnn.py</text>
+<text x="1048" y="546" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• layers: Linear, Sigmoid, Tanh, ReLU</text>
+<text x="1048" y="563" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• MLPRegressor: backprop + Adam</text>
+<text x="1048" y="580" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• CNNClassifier reuses MLP layers</text>
+<text x="1048" y="597" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• im2col conv, scatter-add backward</text>
+<path d="M548.0,646 L548.0,670 L232.0,670 L232.0,648" fill="none" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrowPurple)"/>
+<text x="390.0" y="664" font-size="10.5" font-weight="700" fill="#7c3aed" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">imports DecisionTreeClassifier</text>
+<rect x="84" y="694" width="1232" height="86" rx="14" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="700.0" y="720" font-size="14" font-weight="700" fill="#0f172a" text-anchor="middle">NumPy — the only runtime dependency</text>
+<text x="700.0" y="739" font-size="10.5" font-weight="400" fill="#475569" text-anchor="middle" font-style="italic">vectorised linear algebra and broadcasting: np.linalg.solve  ·  sliding_window_view  ·  np.add.at  ·  log-space probabilities</text>
+<text x="700.0" y="764" font-size="10.5" font-weight="400" fill="#334155" text-anchor="middle">no scikit-learn, PyTorch or autograd inside the library</text>
+<line x1="700" y1="804" x2="700" y2="850" stroke="#15803d" stroke-width="2" marker-start="url(#arrowGreen)" marker-end="url(#arrowGreen)"/>
+<text x="712" y="832" font-size="11" font-weight="700" fill="#15803d" text-anchor="start" stroke="#ffffff" stroke-width="5" paint-order="stroke">checked against scikit-learn on identical data</text>
+<rect x="60" y="850" width="1280" height="300" rx="16" fill="#f0fdf4" stroke="#15803d" stroke-width="2"/>
+<text x="84" y="880" font-size="17" font-weight="700" fill="#14532d" text-anchor="start">Verification  —  scikit-learn is the reference, never a dependency</text>
+<text x="84" y="900" font-size="11" font-weight="400" fill="#166534" text-anchor="start" font-style="italic">scikit-learn, pandas and matplotlib appear only in examples/, tests/ and the notebook</text>
+<rect x="84" y="922" width="296" height="204" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+<text x="100" y="948" font-size="13.5" font-weight="700" fill="#1e3a8a" text-anchor="start">examples/compare_with_sklearn.py</text>
+<text x="100" y="967" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start" font-style="italic">side-by-side benchmark</text>
+<text x="100" y="992" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• trains mlab and scikit-learn on</text>
+<text x="100" y="1009" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• the same split (random_state=42)</text>
+<text x="100" y="1026" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• reproduces the results table</text>
+<text x="100" y="1043" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• R² / accuracy / ARI per model</text>
+<rect x="400" y="922" width="296" height="204" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+<text x="416" y="948" font-size="13.5" font-weight="700" fill="#1e3a8a" text-anchor="start">tests/test_models.py</text>
+<text x="416" y="967" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start" font-style="italic">pytest suite</text>
+<text x="416" y="992" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• each model vs scikit-learn</text>
+<text x="416" y="1009" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• or a known answer</text>
+<text x="416" y="1026" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• metrics match sklearn.metrics</text>
+<text x="416" y="1043" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• predict before fit raises</text>
+<text x="416" y="1060" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• bundled toy data, runs in seconds</text>
+<rect x="716" y="922" width="296" height="204" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+<text x="732" y="948" font-size="13.5" font-weight="700" fill="#1e3a8a" text-anchor="start">final-assignment/SetD.ipynb</text>
+<text x="732" y="967" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start" font-style="italic">end-to-end on real data</text>
+<text x="732" y="992" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• two UCI datasets, library only</text>
+<text x="732" y="1009" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• cleaning, baselines, grid search</text>
+<text x="732" y="1026" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• validation-set tuning</text>
+<text x="732" y="1043" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• 10-run stability study</text>
+<rect x="1032" y="922" width="296" height="204" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+<text x="1048" y="948" font-size="13.5" font-weight="700" fill="#1e3a8a" text-anchor="start">Static quality gates</text>
+<text x="1048" y="967" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start" font-style="italic">pylint  ·  mypy</text>
+<text x="1048" y="992" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• type hints, mypy-clean</text>
+<text x="1048" y="1009" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• NumPy-style docstrings</text>
+<text x="1048" y="1026" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• lint config in pyproject.toml</text>
+<text x="1048" y="1043" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">• reproducible editable install</text>
+<rect x="420" y="1180" width="12" height="12" fill="#4338ca"/>
+<text x="438" y="1190" font-size="11" font-weight="400" fill="#475569" text-anchor="start">model families</text>
+<rect x="620" y="1180" width="12" height="12" fill="#15803d"/>
+<text x="638" y="1190" font-size="11" font-weight="400" fill="#475569" text-anchor="start">evaluation / verification</text>
+<rect x="820" y="1180" width="12" height="12" fill="#7c3aed"/>
+<text x="838" y="1190" font-size="11" font-weight="400" fill="#475569" text-anchor="start">neural networks + internal reuse</text>
+</svg>
